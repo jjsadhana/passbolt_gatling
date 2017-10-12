@@ -1,0 +1,24 @@
+-----------------------------49178983219946327681573202106
+Content-Disposition: form-data; name="data[gpg_auth][keyid]"
+
+caf4eceeb646cafad8e48f7bfac3e7ae508d2308
+-----------------------------49178983219946327681573202106
+Content-Disposition: form-data; name="data[gpg_auth][server_verify_token]"
+
+-----BEGIN PGP MESSAGE-----
+Version: OpenPGP.js v2.5.11
+Comment: https://openpgpjs.org
+
+wcBMA5spR8ahnRFAAQf/cQD0HOxZgOMpHq3cQwCKcSJCJGoz+9OCyTqfWd2Q
+gnliocDzWpxanVOY5TM1udvoGwyuUeFBQOxcDKaVoVzFmRCaP4YXlKlSTY/9
+/nAkv2fK9T+4gEVBThBewLdqEpocCIkAlzzTQziUjIreY5sW6MkOMqnaKLaL
+y2H2kGN7sYv4Gzt4ILXOx5uOjhhmCQviPA2hU42QOfImyNLQbVnYYwpQ990V
+PQLYuuToSaaSjMMOh58YvY+6k83XAX86pRznNTmm2ZUGOvepMiDYTRelQ2cr
+joauBSdakGqTLZs+z18wNEu+cHRWdNbrPDPu3Szez9fpf4Ms21CLC1lwrRM8
+StJ7AWVlblJvzp9E73RQZzY68neUEM+ZIYFnhnSeB7F+j58DqhqmUxvey/OZ
+RhwTWaP0svAcmFe6rdY/bAjkqRwKgsLtNtI+WZR3S4ObFfQCqChXxgZq/WWe
+2uQxE4W5/FYzvQZFJ9VY5oQw+OdaeScYv7jcuGWY6Z5jCIG+
+=t+ew
+-----END PGP MESSAGE-----
+
+-----------------------------49178983219946327681573202106--

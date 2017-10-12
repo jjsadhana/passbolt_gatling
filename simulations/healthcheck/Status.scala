@@ -21,9 +21,12 @@ class Status extends Simulation {
         .acceptEncodingHeader("gzip, deflate")
         .userAgentHeader("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:16.0) Gecko/20100101 Firefox/52.0")
 
+	val headers_0 = Map("Upgrade-Insecure-Requests" -> "1")
+
     object Healthcheck {
         val Status = exec(http("GET Healthcheck Status")
-            .get("/healthcheck/status"))
+            .get("/healthcheck/status")
+			.headers(headers_0))
             .pause(1)
     }
 
