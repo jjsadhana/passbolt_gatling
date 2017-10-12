@@ -7,10 +7,9 @@ The tests are written in Scala and can be run using gatling.
 
 ## Copyright and Licence
 
-
 Copyright (c) Passbolt SARL (https://www.passbolt.com)
 
-Licensed under the Apache License, Version 2.0 (ALv2) 
+Licensed under GNU Affero General Public License v3.0
 For full copyright and license information, please see the LICENSE.txt
 Redistributions of files must retain the above copyright notice.
 
