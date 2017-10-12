@@ -7,9 +7,10 @@ The tests are written in Scala and can be run using gatling.
 
 ## Copyright and Licence
 
+
 Copyright (c) Passbolt SARL (https://www.passbolt.com)
 
-Licensed under GNU Affero General Public License version 3 of the or any later version.
+Licensed under the Apache License, Version 2.0 (ALv2) 
 For full copyright and license information, please see the LICENSE.txt
 Redistributions of files must retain the above copyright notice.
 
@@ -26,19 +27,32 @@ _There are several way you can install and run gatling, we will just assume you 
 downloading the zip archive and not using the maven build._
 
 #### Download the gatling zip archive and unzip it
-For example for version 2.2.4:
+For example for version 2.3.0:
 ```
-wget https://repo1.maven.org/maven2/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.2.4/gatling-charts-highcharts-bundle-2.2.4-bundle.zip
-unzip gatling-charts-highcharts-bundle-2.2.4-bundle.zip
-cd gatling-charts-highcharts-bundle-2.2.4-bundle
+wget https://repo1.maven.org/maven2/io/gatling/highcharts/gatling-charts-highcharts-bundle/2.3.0/gatling-charts-highcharts-bundle-2.3.0-bundle.zip
+unzip gatling-charts-highcharts-bundle-2.3.0-bundle.zip
+cd gatling-charts-highcharts-bundle-2.3.0-bundle
 ```
-#### Replace the user files with a clone of this repository
+#### Edit gatling conf to use passbolt_gatling scenario and data
+You can also just point to another target directory this by altering 
+the configuration in ```{GATLING_HOME}/conf/gatling.conf.```
+
+For example:
 ```
+directory {
+      data = /var/www/passbolt_gatling/data               # Folder where user's data (e.g. files used by Feeders) is located
+      bodies = /var/www/passbolt_gatling/bodies           # Folder where bodies are located
+      simulations =/var/www/passbolt_gatling/simulations # Folder where the bundle's simulations are located
+      results = /var/www/passbolt_gatling/results         # Name of the folder where all reports folder are located
+    }
+```
+
+(Alternative) You could also replace the user files with a clone of this repository
+```
+cd {GATLING_HOME}
 rm -rf user-files
-git clone https://github.com/passbolt/passbolt_gatling.git userfiles
+git clone https://github.com/passbolt/passbolt_gatling.git user-files
 ```
-_Note: you can also just point to another target directory this by altering 
-the configuration in  conf/gatling.conf._
 
 #### Create a file in conf/application.conf
 
@@ -50,9 +64,10 @@ application {
 }
 ```
 ### Running a scenario
-From gatling root folder, you can run the main script as follow:
+From gatling root folder, you can run a script calling the healthcheck status api
+endpoint with 10 users as follow:
 ```
-./bin/gatling.sh -s base.Scenario1
+./bin/gatling.sh -s healtcheck.Status
 ```
 
 ### Viewing the results
